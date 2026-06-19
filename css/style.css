@@ -188,6 +188,9 @@ p strong {
   font-family: 'Gilroy', Roboto, sans-serif;
   margin-bottom: 5px;
 }
+.hero-btn:hover {
+  opacity: 0.85;
+}
 .hero-btn:active {
   transform: translateY(2px) scale(0.96);
 }
@@ -351,6 +354,9 @@ p strong {
   width: fit-content;
   transition: transform 0.15s;
 }
+.programs-desktop .marathon-info .btn:hover {
+  opacity: 0.85;
+}
 .programs-desktop .marathon-info .btn:active {
   transform: scale(0.96);
 }
@@ -450,6 +456,9 @@ p strong {
   text-decoration: none;
   width: fit-content;
   transition: transform 0.15s;
+}
+.programs-mobile .marathon-info .btn:hover {
+  opacity: 0.85;
 }
 .programs-mobile .marathon-info .btn:active {
   transform: scale(0.96);
