@@ -397,8 +397,14 @@
 
 <script>
 function handleSelectProgram() {
-  var el = document.getElementById('cta') || document.getElementById('cta-mobile');
-  if (el) el.scrollIntoView({behavior:'smooth'});
+  var el = document.getElementById('cta');
+  if (!el || el.offsetParent === null) {
+    el = document.getElementById('cta-mobile');
+  }
+  if (el) {
+    history.pushState(null, '', '#' + el.id);
+    el.scrollIntoView({behavior:'smooth'});
+  }
 }
 </script>
 <script src="js/main.js"></script>
