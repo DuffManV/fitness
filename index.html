@@ -17,7 +17,7 @@
         <h1 class="hero-title">Приведите тело в форму с чемпионкой Катей Усмановой</h1>
         <p class="hero-subtitle">без диет, голода и запретов<br>с пользой для здоровья</p>
         <p class="hero-desc">Похудеть, подтянуть попу и живот, набрать форму<br>в зале, восстановиться после родов — тренировки<br>и питание под вашу цель</p>
-        <button class="hero-btn g-btn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Выбрать программу</button>
+        <button class="hero-btn g-btn" onclick="handleSelectProgram()">Выбрать программу</button>
         <p class="hero-note">Для корректной работы сайта отключите VPN</p>
       </div>
       <div class="col hero-img-col">
@@ -36,7 +36,7 @@
         <p class="hero-mobile-subtitle">без диет, голода и запретов<br>с пользой для здоровья</p>
         <img class="hero-mobile-img" src="img/hero.png" alt="Катя Усманова">
         <p class="hero-mobile-desc">Похудеть, подтянуть попу и живот, набрать форму в зале, восстановиться после родов — тренировки и питание под вашу цель</p>
-        <button class="hero-btn g-btn" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Выбрать программу</button>
+        <button class="hero-btn g-btn" onclick="handleSelectProgram()">Выбрать программу</button>
         <p class="hero-note">Для корректной работы сайта отключите VPN</p>
       </div>
     </div>
@@ -374,7 +374,7 @@
 </section>
 
 <!-- ==================== CTA: MOBILE (≤1020px) ==================== -->
-<section class="cta-mobile">
+<section class="cta-mobile" id="cta-mobile">
   <div class="container">
     <div class="row">
       <div class="col col-md-4 col-md-offset-4">
@@ -395,6 +395,12 @@
   </div>
 </section>
 
+<script>
+function handleSelectProgram() {
+  var el = document.getElementById('cta') || document.getElementById('cta-mobile');
+  if (el) el.scrollIntoView({behavior:'smooth'});
+}
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
